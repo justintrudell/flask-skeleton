@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Flask Skeleton</title>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="column is-one-third">
+            <h1 class="title">All Models</h1>
+            <hr> {% if models %}
+            <ol>
+                {% for m in models %}
+                <li>{{m}}</li>
+                {% endfor %}
+            </ol>
+            {% else %}
+            <p>No models!</p>
+            {% endif %}
+        </div>
+    </div>
+    {% block js %}{% endblock %}
+</body>
+
+</html>
